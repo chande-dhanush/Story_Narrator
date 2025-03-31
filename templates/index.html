@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Scraper Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay muted loop id="video-background">
+            <source src="../static/background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay"></div> <!-- Blurry background -->
+    <div class="chat-container">
+        <div class="chatbot-name">Dream Scraper</div>
+        <div id="chatbox" class="chatbox">
+            <div class="messages"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Type your message..." autofocus>
+            <button id="sendButton">
+                <div class="arrow-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                        <path d="M800 480H160a32 32 0 1 0 0 64h640a32 32 0 0 0 0-64z" fill="#ffffff"></path>
+                        <path d="M786.752 512 521.344 776.344a32 32 0 1 0 45.312 45.312l288-288a32 32 0 0 0 0-45.312l-288-288a32 32 0 1 0-45.312 45.312L786.752 512z" fill="#ffffff"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
